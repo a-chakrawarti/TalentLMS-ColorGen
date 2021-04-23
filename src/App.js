@@ -6,7 +6,7 @@ import InputComponent from "./components/InputComponent";
 
 function App() {
   const [inputColor, setInputColor] = useState("");
-  const [colorList, setColorList] = useState(new Values("#a0b0c0").all(10));
+  const [colorList, setColorList] = useState(new Values("#296745").all(10));
   const [errorAlert, setErrorAlert] = useState(false);
 
   const handleSubmit = (e) => {
@@ -14,8 +14,8 @@ function App() {
     try {
       const newColorList = new Values(inputColor).all(10);
       setColorList(newColorList);
+      setErrorAlert(false);
     } catch (error) {
-      console.log(error);
       setErrorAlert(true);
     }
   };

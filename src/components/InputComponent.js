@@ -14,11 +14,11 @@ const InputComponent = ({
       <div className="search-bar">
         <form onSubmit={handleSubmit}>
           <input
-            style={errorAlert ? `${{ border: "2px solid red" }}` : null}
+            className={errorAlert ? "red-border" : null}
             type="text"
             onChange={handleChange}
             value={inputColor}
-            placeholder="#a0b0c0"
+            placeholder="#296745"
           />
           <button type="submit">Submit</button>
         </form>
